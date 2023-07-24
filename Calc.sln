@@ -1,0 +1,39 @@
+using Org.BouncyCastle.Utilities.Net;
+using System;
+using System.Collections.Generic;
+using System.Dynamic;
+using System.Linq;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculator
+{
+    internal class simple
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Write First Number");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            //
+            Console.WriteLine("Write the operator");
+            string op = Console.ReadLine();
+            //
+            Console.WriteLine("Write Second Number");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            //
+            if (op == "+") {
+                Console.WriteLine(num1 + num2);
+            }
+            if (op == "-") {
+                Console.WriteLine(num1 - num2);
+                if (op == "*")
+                {
+                    Console.WriteLine(num1 * num2);
+                    if (op == "/") { Console.WriteLine(num1 / num2);}
+                }
+            }
+        }
+    }
+}
